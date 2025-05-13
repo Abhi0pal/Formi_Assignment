@@ -1,103 +1,100 @@
-#Barbeque Nation Inbound Enquiry and Booking Chatbot
-##Purpose
-The primary purpose of this project is to implement an inbound enquiry and booking chatbot for Barbeque Nation, which will handle:
+# 🤖 **Barbeque Nation Inbound Enquiry and Booking Chatbot**
 
-Frequently Asked Questions (FAQs)
+## 🎯 **Purpose**
+The primary goal of this project is to implement an **inbound enquiry and booking chatbot** for **Barbeque Nation**, capable of handling:
 
-New bookings
+- ✅ **Frequently Asked Questions (FAQs)**
+- 📅 **New bookings**
+- 🔁 **Booking updates and cancellations**
 
-Updates and cancellations for bookings for Barbeque Nation outlets in Delhi and Bangalore.
+For **Barbeque Nation outlets in Delhi and Bangalore**, this chatbot ensures a **seamless and automated customer experience**. 💬
 
-This system provides a seamless and automated way for customers to interact with the Barbeque Nation service.
+---
 
-System Breakdown
-Components:
-State Prompt
+## 🧩 **System Breakdown**
 
-Represents the context or instruction at any given point in the conversation.
+### 🧠 **State Prompt**
+- Represents the **context or instruction** at any point in the conversation.
+- The system has **multiple states**, with **only one active** at a time.
+- Each state prompt is a **template** filled with variables, entities, and tools to drive the flow.
 
-The system has multiple states, with only one state being active at any given time.
+### 🔀 **State Transition Prompt**
+- A predefined instruction or template to **move between states** based on user input.
+- Ensures **smooth conversation flow** by guiding transitions when tasks are completed.
 
-Each state prompt requires filling in templates with variables, entities, and tools that guide the conversational flow.
+### 📚 **Knowledge Base**
+- A **structured collection** of domain-specific info like FAQs, policies, and property data.
+- Used to generate **accurate and context-aware** chatbot responses.
 
-State Transition Prompt
+### 📊 **Post-Call Configuration (BONUS)**
+- **Analyzes completed conversations** to extract:
+  - User satisfaction
+  - Intent fulfillment
+  - Response accuracy
+  - Conversation flow
+- Used for **improving system performance**.
 
-A predefined instruction or template used to move from one state to another based on user input.
+### 💻 **Chatbot (BONUS)**
+- **Reverse-engineers API endpoints** from `beta.retellai.com`.
+- Builds a **custom frontend UI** for the chatbot.
+- Hosted for **demonstration purposes**.
 
-Ensures smooth progression through the conversation based on the user's intent.
+---
 
-Knowledge Base
+## ✅ **Functional Requirements**
 
-A structured collection of domain-specific information, such as FAQs, product manuals, and property details.
+### 🔧 **Fork and Clone the Repository**
+- Fork: [agentops-template-repo](https://github.com/AryamannNingombam/agentops-template-repo)
+- Complete the API endpoints for:
+  - 📚 **Knowledge Base**
+  - 🧠 **Chatbot**
+  - 📈 **Post-Call Configuration**
 
-The chatbot uses this knowledge base to generate relevant responses to user queries.
+### 🗺️ **Build Conversation Flow**
+- Use the **Conversational Flow Diagram** and **State Template Diagram**.
+- Write **State Transition Prompts** to guide the chatbot properly.
+- Convert the **raw knowledge base** into a structured format.
 
-Post-Call Configuration (BONUS)
+### 🌐 **Host API Endpoints**
+- Host endpoints for the **knowledge base** and **phone number integration** for conversation flow.
 
-Involves analyzing and extracting insights from the completed conversation.
+---
 
-Provides metrics like user satisfaction, intent fulfillment, response accuracy, and conversation flow to help improve the system's performance.
+## 🚀 **BONUS Functional Requirements**
+- 📊 **Post-Call Analysis**: Extract insights such as user satisfaction and intent fulfillment.
+- 🤖 **Chatbot Creation**: Reverse-engineer `beta.retellai.com` APIs and host your own chatbot frontend.
 
-Chatbot (BONUS)
+---
 
-Reverse-engineers the API endpoints from beta.retellai.com to create a custom frontend UI for the chatbot.
+## ⚙️ **Configuration Required**
+- **Node.js** – Server runtime
+- **Express.js** – API development
+- **body-parser** – Handle incoming JSON
+- **dotenv** – Environment variable management
+- **RetellAI** – State machine and chatbot hosting
 
-Hosts the chatbot for demonstration purposes.
+---
 
-Functional Requirements
-Fork and Clone the Repository
-Fork the templates and methods shared in the agentops-template-repo to complete the API endpoints for the Knowledge Base, Chatbot, and Post-Call Configuration.
+## 🏗️ **Architecture Overview**
 
-Use the Conversational Flow Diagram and State Template Diagram to build the steps for the conversation flow.
+### 🖥️ **Frontend**
+- Built using **RetellAI + custom UI**
+- Interface for customer interactions
 
-Create State Transition Prompts to guide the conversation flow correctly.
+### 🛠️ **Backend**
+- Built with **Express.js**
+- Handles:
+  - Knowledge base queries
+  - Bookings, updates, and cancellations
 
-Convert the raw knowledge base shared by the business into a structured knowledge base format.
+### 📚 **Knowledge Base**
+- Structured FAQs and property info used by the chatbot for accurate responses
 
-Host the API endpoints for the knowledge base and the phone number for conversational flow.
+### 📈 **Post-Call Analysis (BONUS)**
+- Monitors and reports:
+  - Task completion
+  - User sentiment
+  - Accuracy metrics
 
-BONUS Functional Requirements
-Post-Call Analysis: Extract insights like user satisfaction, response accuracy, and conversation flow from the interaction data.
-
-Chatbot Creation: Reverse-engineer the API endpoints of beta.retellai.com to create a chatbot and host it with your own frontend UI.
-
-Configuration Required
-Node.js (for running the server)
-
-Express.js (for building the API)
-
-Body-Parser (for parsing incoming request bodies)
-
-dotenv (for managing environment variables)
-
-RetellAI (for creating and hosting the chatbot)
-
-API Endpoints for Knowledge Base: To be configured in the app.js file for knowledge handling.
-
-Architecture Overview
-This system consists of the following main components:
-
-Frontend:
-
-A simple user interface for interacting with the chatbot, built using the RetellAI platform and custom frontend technologies.
-
-Backend:
-
-The Express.js server handles API requests for knowledge base queries, new bookings, updates, and cancellations.
-
-Integrates with the Knowledge Base API and routes for handling FAQ queries.
-
-Knowledge Base:
-
-A structured set of information (e.g., FAQs) that the chatbot uses to generate relevant answers.
-
-Post-Call Analysis (BONUS):
-
-Evaluates the chatbot interaction and extracts key metrics to improve the chatbot’s performance over time.
-
-
-
-
-
-
+---
 
